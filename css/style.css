@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'kaiqsites';
+    src: url("font/Raleway.ttf");
+}
+
+:root {
+    --HL: hsl(0, 0%, 100%); 
+    --midhover: hsl(0, 0%, 35%);
+    --mid: hsl(0, 7%, 76%);
+    --shadowhover: hsl(0, 0%, 25%);
+    --shadow: hsl(0, 100%, 99%);
+
+    --HLblu: hsl(270, 100%, 92%);
+    --midhoverblu: hsl(270, 60%, 75%);
+    --midblu: hsl(270, 50%, 70%);
+    --shadowhoverblu: hsl(270, 40%, 60%);
+    --shadowblu: hsl(270, 35%, 50%);
+
+    --HLred: hsl(340, 100%, 90%);
+    --midhoverred: hsl(340, 70%, 75%);
+    --midred: hsl(340, 60%, 70%);
+    --shadowhoverred: hsl(340, 50%, 60%);
+    --shadowred: hsl(340, 45%, 50%);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--HL); 
+}
+
+#UIred {
+    color: var(--shadowred);
+    background-color: var(--midred);
+}
+
+#UIred:hover {
+    color: var(--midhoverred);
+    background-color: var(--shadowhoverred);
+}
+
+#UIred:focus {
+    outline: solid var(--shadowred);
+}
+
+#UIblu {
+    color: var(--shadowblu);
+    background-color: var(--midblu);
+}
+
+#UIblu:hover {
+    color: var(--midhoverblu);
+    background-color: var(--shadowhoverblu);
+}
+
+#UIblu:focus {
+    outline: solid var(--shadowblu);
+}
+
+#UIred,
+#UIblu {
+    border: none;
+    border-radius: 0.25em;
+
+    padding: 0.5em;
+    margin: 0.5rem;
+
+    flex: auto;
+
+    font: bold 5rem 'kaiqsites';
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+div.box {
+    border-radius: 1rem;
+    margin: auto;
+    width: fit-content;
+
+    background-color: var(--HL);
+}
+
+div.login {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#borders {
+    width: 100%;
+    flex: none;
+    font: bold 1rem 'kaiqsites';
+    color: var(--mid);
+
+    background-color: var(--shadow);
+}
+
+main {
+    overflow-y: scroll;
+    scrollbar-color: var(--mid) var(--shadow);
+    flex: auto;
+    height: 500px;
+    padding: 2rem;
+    background-color: var(--mid);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+
+    padding: 2rem;
+}
+
+h1 {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--mid);
+    font: bold 2rem 'kaiqsites';
+}
